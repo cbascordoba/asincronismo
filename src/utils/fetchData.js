@@ -2,9 +2,6 @@
 // guardo en la variable el valor del archivo XMLHttpRequest
 let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
-
-
-
 // funcion que nos permite traer la informacion desde nuestra API, recibe un callback y desencadena los llamados que necesitamos.
 const fetchData = (url_api)=>{
 
@@ -21,17 +18,12 @@ const fetchData = (url_api)=>{
                 (xhttp.status ===200)
                     ? resolve(JSON.parse(xhttp.responseText))
                     : reject(new Error('Error ', url_api))
-                
-
-
-            
+                    
             }
         });
     
         xhttp.send();
     });
-
-
 }
 
 module.exports = fetchData;
